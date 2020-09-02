@@ -1,0 +1,10 @@
+router-outlet {
+  display: block;
+  margin: 100px auto 0;
+
+  app-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+}

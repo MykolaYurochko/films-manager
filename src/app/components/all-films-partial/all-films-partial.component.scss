@@ -1,0 +1,10 @@
+.all-films {
+  max-width: 1333px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  & app-film {
+    margin: 0 auto;
+  }
+}

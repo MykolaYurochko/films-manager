@@ -1,0 +1,14 @@
+<div class="wrapper" *ngIf="films.length; else elseBlock">
+  <div class="controler">
+    <div (click)="clearList()">Очистити список</div>
+    <p>Всього ${{totalPrice}}</p>
+  </div>
+  <div class="favorite-films">
+    <app-film *ngFor="let film of films" [film]="film" (click)="fullInfo(film)"></app-film>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <div class="no-films">
+    Ви ще не обрали фільмів!
+  </div>
+</ng-template>

@@ -1,0 +1,30 @@
+.favorite-films {
+  max-width: 1333px;
+  min-height: calc(100vh - 265px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  & app-film {
+    margin: 0 8px;
+  }
+}
+
+.controler {
+  display: flex;
+  justify-content: space-around;
+  div {
+    &:hover {
+      color: #ff4500;
+      cursor: pointer;
+    }
+  }
+}
+
+.no-films {
+  height: calc(100vh - 245px);
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 1.5em;
+}

@@ -1,0 +1,28 @@
+<div class="film">
+  <div class="film__img"><img src={{film.image}} alt="Smth went wrong"></div>
+  <div class="film__description">
+    <div class="film__description--name">{{film.name}}</div>
+    <div class="film__description--year-type"><span>{{film.year}}</span>, {{film.type}}</div>
+    <div class="film__description--info">{{film.description}}</div>
+  </div>
+
+  <div class="film__favorite" (click)="changeStatus($event, film)">
+    <div class="film__favorite--icon  icon" *ngIf="film.isFavorite; else elseBlock">
+      <div class="icon__tooltip">Прибрати</div>
+      <div class="icon__pic">
+        <img src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/4056732881576503408-512.png" alt="">
+      </div>
+    </div>
+
+    <ng-template #elseBlock>
+      <div class="film__favorite--icon icon">
+        <div class="icon__tooltip">В обране</div>
+        <div class="icon__pic">
+          <img src="https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/1181592571576503408-512.png"
+            alt="">
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <div class="film__price">Вартість: <span>${{film.price}}</span></div>
+</div>

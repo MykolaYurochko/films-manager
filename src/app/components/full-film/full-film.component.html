@@ -1,0 +1,13 @@
+<div class="to-list" (click)="backToList()">
+  <img src="https://cdn.iconscout.com/icon/free/png-512/arrow-back-ios-1781222-1518596.png" alt="Smth went wrong">
+  Назад
+</div>
+<div class="film">
+  <div class="film__img"><img src={{film.image}} alt="Smth went wrong"></div>
+  <div class="film__description">
+    <div class="film__description--name">{{film.name}}</div>
+    <div class="film__description--year-type"><span>{{film.year}}</span>, {{film.type}}</div>
+    <div class="film__description--info">{{film.description}}</div>
+  </div>
+  <div class="film__price">Вартість: <span>${{film.price}}</span></div>
+</div>
